@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Premium Luxury Color Palette for Formula Lab */
+    /* Perfect for premium perfumes, oud, attars, luxury scents */
+    /* #0E0E0E – Rich Black, #1C1C1C – Charcoal Gray, #D4AF37 – Royal Gold */
+    /* #F5F5F5 – Soft White, #B8860B – Warm Gold Accent */
+
+    --background: 0 0% 96%; /* #F5F5F5 - Soft White */
+    --foreground: 0 0% 5.5%; /* #0E0E0E - Rich Black */
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 5.5%;
+    --popover: 0 0% 96%;
+    --popover-foreground: 0 0% 5.5%;
+    --primary: 43 74% 49%; /* #D4AF37 - Royal Gold */
+    --primary-foreground: 0 0% 5.5%; /* Rich Black text on gold */
+    --secondary: 0 0% 11%; /* #1C1C1C - Charcoal Gray */
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 43 89% 38%; /* #B8860B - Warm Gold Accent */
+    --accent-foreground: 0 0% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 96%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 43 74% 49%; /* Royal Gold ring */
+    --chart-1: 43 74% 49%;
+    --chart-2: 43 89% 38%;
+    --chart-3: 0 0% 11%;
+    --chart-4: 210 40% 60%;
+    --chart-5: 45 85% 65%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 96%;
+    --sidebar-foreground: 0 0% 5.5%;
+    --sidebar-primary: 43 74% 49%;
+    --sidebar-primary-foreground: 0 0% 5.5%;
+    --sidebar-accent: 0 0% 90%;
+    --sidebar-accent-foreground: 0 0% 5.5%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 43 74% 49%;
+  }
+
+  .dark {
+    /* Dark mode with inverted luxury palette */
+    --background: 0 0% 5.5%; /* #0E0E0E - Rich Black background */
+    --foreground: 0 0% 96%; /* #F5F5F5 - Soft White text */
+    --card: 0 0% 11%; /* #1C1C1C - Charcoal Gray */
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 5.5%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 43 74% 49%; /* #D4AF37 - Royal Gold */
+    --primary-foreground: 0 0% 5.5%;
+    --secondary: 0 0% 11%; /* Charcoal Gray */
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 43 89% 38%; /* #B8860B - Warm Gold Accent */
+    --accent-foreground: 0 0% 96%;
+    --destructive: 0 63% 50%;
+    --destructive-foreground: 0 0% 96%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 43 74% 49%;
+    --chart-1: 43 74% 49%;
+    --chart-2: 43 89% 38%;
+    --chart-3: 0 0% 96%;
+    --chart-4: 270 60% 65%;
+    --chart-5: 15 75% 60%;
+    --sidebar-background: 0 0% 5.5%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 43 74% 49%;
+    --sidebar-primary-foreground: 0 0% 5.5%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 43 74% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Luxury fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+/* Luxury animation effects */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(161, 188, 152, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(161, 188, 152, 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.glow {
+  animation: glow 4s ease-in-out infinite;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(161, 188, 152, 0.2), transparent);
+  background-size: 1000px 100%;
+  animation: shimmer 3s infinite;
+}
